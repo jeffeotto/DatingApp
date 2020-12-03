@@ -9,7 +9,7 @@ import { Observable } from 'rxjs';
 import { AccountService } from '../_services/account.service';
 import { User } from '../_models/user';
 import { take } from 'rxjs/operators';
-import { SSL_OP_CRYPTOPRO_TLSEXT_BUG } from 'constants';
+
 
 @Injectable()
 export class JwtInterceptor implements HttpInterceptor {

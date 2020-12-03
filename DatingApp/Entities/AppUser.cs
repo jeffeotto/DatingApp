@@ -25,9 +25,9 @@ namespace DatingApp.Entities
         public string  Country { get; set; }
         public ICollection<Photos> Photos { get; set; }
 
-        //public int GetAge()
-        //{
-        //    return DateofBirth.CalculateAge();
-        //}
+        public int GetAge()
+        {
+            return DateofBirth.CalculateAge();
+        }
     }
 }
