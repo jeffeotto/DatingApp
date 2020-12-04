@@ -14,7 +14,7 @@ import { AccountService } from '../_services/account.service';
 
 
 export class NavComponent implements OnInit {
-  navbarOpen = false;
+
   model: any = {}
   
 
@@ -38,7 +38,6 @@ export class NavComponent implements OnInit {
       this.router.navigateByUrl('/');
     }
     
-    toggleNavbar() {
-      this.navbarOpen = !this.navbarOpen;
-    }
+   
+   
 }

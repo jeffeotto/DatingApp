@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule} from '@angular/core';
 
-
+import { LoadingBarHttpClientModule } from '@ngx-loading-bar/http-client';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import {HttpClientModule, HTTP_INTERCEPTORS} from '@angular/common/http';
@@ -23,6 +23,8 @@ import { MemberCardComponent } from './members/member-card/member-card.component
 import { JwtInterceptor } from './_interceptors/jwt.interceptor';
 import { MemberEditComponent } from './members/member-edit/member-edit.component';
 
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -38,6 +40,7 @@ import { MemberEditComponent } from './members/member-edit/member-edit.component
     ServerErrorComponent,
     MemberCardComponent,
     MemberEditComponent,
+  
    
   ],
   imports: [
@@ -46,7 +49,10 @@ import { MemberEditComponent } from './members/member-edit/member-edit.component
     HttpClientModule,
     FormsModule,
     BrowserAnimationsModule,
-    SharedModule
+    SharedModule,
+    LoadingBarHttpClientModule,
+    
+  
  ],
   providers: [
 {provide:HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi:true},
